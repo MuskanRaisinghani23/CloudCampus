@@ -4,10 +4,25 @@
  */
 package Model.Professor;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author raisi
  */
 public class Professor {
+    private int professorId;
+    private String professorName;
+    private String langOfInstruction;
+    private ArrayList<String> topicsCovered;
+    private ArrayList<Integer> ratingsList;
+
+    public Professor(int professorId, String professorName, String langOfInstruction) {
+        this.professorId = professorId;
+        this.professorName = professorName;
+        this.langOfInstruction = langOfInstruction;
+        this.topicsCovered = new ArrayList<>();
+        this.ratingsList = new ArrayList<>() ;
+    }
     
 }

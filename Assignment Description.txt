@@ -1,0 +1,28 @@
+--- Professor:
+- Professor class - name, age, location, languages known, school, work experience, teaching experience (either only once or a button to add many experiences)
+- Professor directory class - list of all professors
+- manage their own courses -> add courses functionality with course name, type, description, date, time, location, edit above info
+- sign up and log in (after professor signs up , we can ask administrator/employer to enable them to login by providing credentials in sout)
+- schedule page : semester based, future term schedules
+
+--- Course:
+- Course class - stores above course information
+- Course directory class - list of all courses
+- search capability for students based on professor name, topic, region, language, see rating too
+
+---Student:
+- Student class - name, age, address, id, affiliated university, etc
+- Student directory class - list of all students
+- sign up and log in (after student signs up , we can ask administrator/employer to enable them to login by providing credentials in sout, can also provide ID)
+- registration option for student beside each course
+- option to rate professor
+- declartion request for graduation
+
+
+--- Employer:
+- Employee class - name, position, dropdown containing names of the professors and students to approve them and provide login info.
+- ^ admin login
+- universal certification authority - transcript provider - condition: student must complete 8 courses (do we divide into terms)
+- view performance data i.e no of professors, no of students, no of courses etc
+
+*cost
