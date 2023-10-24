@@ -28,8 +28,8 @@ public class ProfessorDirectory {
         this.professorList = professorList;
     }
     
-    public Professor addProfessor(int professorId, String professorName, String langOfInstruction){
-        Professor professor = new Professor( professorId, professorName, langOfInstruction);
+    public Professor addProfessor(int professorId, String professorName, int professorAge, String professorAddress, float yearsOfExperience, String langOfInstruction, ArrayList<String> coursesOffered, ArrayList<String> topicsCovered, ArrayList<Integer> ratingsList, int researchPaperPublished, String description){
+        Professor professor = new Professor(professorId, professorName, professorAge, professorAddress, yearsOfExperience, langOfInstruction, coursesOffered, topicsCovered, ratingsList, researchPaperPublished, description);
         professorList.add(professor);
         return professor;
     }

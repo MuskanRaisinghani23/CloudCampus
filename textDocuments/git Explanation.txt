@@ -1,0 +1,43 @@
+1. create new Branch from existing branch(main in this case)
+	git checkout -b newBranchName existingBranchName
+	
+2. Once done with work, run following commands in the newBranchName (add command to stage the changes, commit command to commit changes)
+	git add .
+	git commit -m "Your message"
+	
+3. Once committed, switch the branch to main(or whichever branch you want to merge changes into) branch
+	git checkout main
+	
+4. Pull the latest changes in the main branch if any
+	git pull origin main
+	
+5. git checkout to your branch again and merge the changes from main to your newBranchName
+	git checkout newBranchName
+	git merge main
+	
+6. Check for conflicts if any, 
+	if conflicts, solve them. Once resolved, stage and commit and push
+		git add .
+		git commit -m "Conflicts resolved"
+		git push origin newBranchName
+	
+	if no conflicts, push the final changes
+		git push origin newBranchName
+	
+7. Checkout again to main branch, merge the changes from your branch to main
+	git checkout main
+	git pull
+	git merge newBranchName
+	git push origin main
+
+Reference: https://stackoverflow.com/questions/4556467/git-pull-or-git-merge-between-master-and-development-branches
+
+Extra:
+To check branches
+	git branch
+	
+To understand the status of git changes
+	git status
+	
+To get help
+	git --help
