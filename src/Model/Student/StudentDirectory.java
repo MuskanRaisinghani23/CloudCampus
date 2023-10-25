@@ -35,4 +35,15 @@ public class StudentDirectory {
         studentList.add(student);
         return student;
     }
+    
+    //To search student based on 
+    public Student searchUser(String userName){
+        for(Student studentInfo: studentList){
+            if(studentInfo.getUserName().equals(userName)){
+                return studentInfo;
+            }
+        }
+        return null;
+    }
+    
 }

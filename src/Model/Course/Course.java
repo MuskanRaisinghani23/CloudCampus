@@ -18,5 +18,29 @@ public class Course {
         this.courseName = courseName;
         this.professorAssociated = professorAssociated;
     }
+
+    public int getCourseId() {
+        return CourseId;
+    }
+
+    public void setCourseId(int CourseId) {
+        this.CourseId = CourseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public int getProfessorAssociated() {
+        return professorAssociated;
+    }
+
+    public void setProfessorAssociated(int professorAssociated) {
+        this.professorAssociated = professorAssociated;
+    }
     
 }

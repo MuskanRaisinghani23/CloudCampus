@@ -37,6 +37,94 @@ public class Professor {
         this.description = description;
     }
 
+    public int getProfessorId() {
+        return professorId;
+    }
+
+    public void setProfessorId(int professorId) {
+        this.professorId = professorId;
+    }
+
+    public String getProfessorName() {
+        return professorName;
+    }
+
+    public void setProfessorName(String professorName) {
+        this.professorName = professorName;
+    }
+
+    public int getProfessorAge() {
+        return professorAge;
+    }
+
+    public void setProfessorAge(int professorAge) {
+        this.professorAge = professorAge;
+    }
+
+    public String getProfessorAddress() {
+        return professorAddress;
+    }
+
+    public void setProfessorAddress(String professorAddress) {
+        this.professorAddress = professorAddress;
+    }
+
+    public float getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(float yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public String getLangOfInstruction() {
+        return langOfInstruction;
+    }
+
+    public void setLangOfInstruction(String langOfInstruction) {
+        this.langOfInstruction = langOfInstruction;
+    }
+
+    public ArrayList<String> getCoursesOffered() {
+        return coursesOffered;
+    }
+
+    public void setCoursesOffered(ArrayList<String> coursesOffered) {
+        this.coursesOffered = coursesOffered;
+    }
+
+    public ArrayList<String> getTopicsCovered() {
+        return topicsCovered;
+    }
+
+    public void setTopicsCovered(ArrayList<String> topicsCovered) {
+        this.topicsCovered = topicsCovered;
+    }
+
+    public ArrayList<Integer> getRatingsList() {
+        return ratingsList;
+    }
+
+    public void setRatingsList(ArrayList<Integer> ratingsList) {
+        this.ratingsList = ratingsList;
+    }
+
+    public int getResearchPaperPublished() {
+        return researchPaperPublished;
+    }
+
+    public void setResearchPaperPublished(int researchPaperPublished) {
+        this.researchPaperPublished = researchPaperPublished;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     
     
 }
