@@ -75,7 +75,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="professorPanelTabbedPanel">
+    <Container class="javax.swing.JTabbedPane" name="professortabbedpane">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -184,48 +184,48 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jButton1" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="updatedetailsbtn" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jLabel9" min="-2" pref="747" max="-2" attributes="0"/>
+                              <Component id="updatedetailslbl" min="-2" pref="747" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel4" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <Component id="addresslbl" min="-2" pref="108" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel3" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <Component id="agelbl" min="-2" pref="108" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField3" max="32767" attributes="0"/>
+                                      <Component id="agetxt" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel2" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <Component id="namelbl" min="-2" pref="108" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField2" max="32767" attributes="0"/>
+                                      <Component id="nametxt" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel1" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <Component id="idlbl" min="-2" pref="108" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField1" min="-2" pref="219" max="-2" attributes="0"/>
+                                      <Component id="idtxt" min="-2" pref="219" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel8" max="32767" attributes="0"/>
+                                  <Component id="aboutlbl" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="languagelbl" min="-2" pref="124" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabel7" max="32767" attributes="0"/>
-                                          <Component id="jLabel5" min="-2" pref="126" max="-2" attributes="0"/>
+                                          <Component id="paperpublishlbl" max="32767" attributes="0"/>
+                                          <Component id="experiencelbl" min="-2" pref="126" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -235,10 +235,10 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <Component id="languagetxt" min="-2" pref="214" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jTextField6" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
-                                          <Component id="jTextField4" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
+                                          <Component id="paperpublishtxt" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
+                                          <Component id="experiencetxt" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -252,27 +252,27 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="29" max="32767" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="updatepassbtn" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" pref="349" max="-2" attributes="0"/>
+                                      <Component id="updatepasswordlbl" min="-2" pref="349" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabel11" max="32767" attributes="0"/>
-                                          <Component id="jLabel12" max="32767" attributes="0"/>
-                                          <Component id="jLabel13" alignment="1" min="-2" pref="122" max="-2" attributes="0"/>
+                                          <Component id="prevpasslbl" max="32767" attributes="0"/>
+                                          <Component id="newpasslbl" max="32767" attributes="0"/>
+                                          <Component id="confirmpasslbl" alignment="1" min="-2" pref="122" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jPasswordField1" max="32767" attributes="0"/>
-                                          <Component id="jPasswordField2" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jPasswordField3" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                                          <Component id="prevpasstxt" max="32767" attributes="0"/>
+                                          <Component id="newpasstxt" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="confirmpasstxt" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -289,8 +289,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel10" max="32767" attributes="0"/>
-                                  <Component id="jLabel9" pref="49" max="32767" attributes="0"/>
+                                  <Component id="updatepasswordlbl" max="32767" attributes="0"/>
+                                  <Component id="updatedetailslbl" pref="49" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -301,25 +301,25 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jTextField3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                                          <Component id="jLabel3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="agetxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="agelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jLabel1" max="32767" attributes="0"/>
-                                                          <Component id="jTextField1" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="idlbl" max="32767" attributes="0"/>
+                                                          <Component id="idtxt" min="-2" pref="29" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jLabel2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                                          <Component id="jTextField2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="namelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="nametxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel4" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="addresslbl" min="-2" pref="29" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -327,25 +327,25 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jTextField5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="languagelbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="languagetxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                      <Component id="jTextField6" min="-2" pref="29" max="-2" attributes="0"/>
+                                                      <Component id="paperpublishtxt" min="-2" pref="29" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jLabel5" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                                                          <Component id="jTextField4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                          <Component id="experiencelbl" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                                          <Component id="experiencetxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <EmptySpace min="58" pref="58" max="-2" attributes="0"/>
-                                                      <Component id="jLabel7" min="-2" pref="37" max="-2" attributes="0"/>
+                                                      <Component id="paperpublishlbl" min="-2" pref="37" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel8" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="aboutlbl" min="-2" pref="29" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane2" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -356,26 +356,26 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                                              <Component id="jPasswordField1" max="32767" attributes="0"/>
+                                              <Component id="prevpasstxt" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="jLabel11" min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="prevpasslbl" min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel12" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="jPasswordField2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="newpasslbl" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="newpasstxt" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel13" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="jPasswordField3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="confirmpasslbl" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="confirmpasstxt" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton2" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="jButton1" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="updatepassbtn" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="updatedetailsbtn" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator1" min="-2" pref="395" max="-2" attributes="0"/>
@@ -386,7 +386,19 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="updatedetailslbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="16" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="66" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Update Basic Details"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="idlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -394,14 +406,14 @@
                 <Property name="text" type="java.lang.String" value="ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="idtxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="namelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -409,14 +421,14 @@
                 <Property name="text" type="java.lang.String" value="Full Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="nametxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="agelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -424,14 +436,14 @@
                 <Property name="text" type="java.lang.String" value="Age:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="agetxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="addresslbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -446,7 +458,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="addresstxt">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -457,7 +469,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="languagelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -465,14 +477,14 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Language of &lt;br&gt;Instruction:&lt;/html&gt;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="languagetxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="paperpublishlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -480,17 +492,17 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Number of Research &lt;br&gt;Papers Published:&lt;/html&gt;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="paperpublishtxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paperpublishtxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="experiencelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -498,17 +510,17 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Years Of&lt;br&gt;Experience:&lt;/html&gt;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="experiencetxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="experiencetxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
+            <Component class="javax.swing.JLabel" name="aboutlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -523,7 +535,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                <Component class="javax.swing.JTextArea" name="abouttxt">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -534,36 +546,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JSeparator" name="jSeparator1">
-              <Properties>
-                <Property name="orientation" type="int" value="1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="33" red="66" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Update Basic Details"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="16" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="33" red="66" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Update Password"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="updatedetailsbtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -577,7 +560,24 @@
                 <Property name="text" type="java.lang.String" value="Update Details"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JSeparator" name="jSeparator1">
+              <Properties>
+                <Property name="orientation" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="updatepasswordlbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="16" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="66" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Update Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="prevpasslbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -585,7 +585,14 @@
                 <Property name="text" type="java.lang.String" value="Previous Password:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JPasswordField" name="prevpasstxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="newpasslbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -593,7 +600,14 @@
                 <Property name="text" type="java.lang.String" value="New Password:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JPasswordField" name="newpasstxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="confirmpasslbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -601,7 +615,14 @@
                 <Property name="text" type="java.lang.String" value="Confirm Password:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JPasswordField" name="confirmpasstxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="updatepassbtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -613,30 +634,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update Password"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField2">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField3">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -662,85 +659,108 @@
                       <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane3" min="-2" pref="596" max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="updatecoursebtn" min="-2" pref="96" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="72" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel20" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <Component id="semesterlbl" min="-2" pref="107" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="jComboBox2" min="-2" pref="244" max="-2" attributes="0"/>
+                                  <Component id="semestercombo" min="-2" pref="244" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel21" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <Component id="classcapacitylbl" min="-2" pref="107" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton5" min="-2" pref="123" max="-2" attributes="0"/>
-                                      <Component id="jTextField13" min="-2" pref="244" max="-2" attributes="0"/>
+                                      <Component id="savecoursebtn" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Component id="classcapacitytxt" min="-2" pref="244" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel19" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="courseidlbl" min="-2" pref="107" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="jTextField12" min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="courseidtxt" min="-2" pref="244" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel18" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="coursenamelbl" min="-2" pref="107" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="jTextField11" min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="coursenametxt" min="-2" pref="244" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel22" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="updatecourselbl" min="-2" pref="1200" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="334" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="jLabel22" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel19" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField12" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="courseidlbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="courseidtxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel18" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField11" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="coursenamelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="coursenametxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel20" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jComboBox2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="semesterlbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="semestercombo" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel21" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField13" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="classcapacitylbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="classcapacitytxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton4" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="jButton5" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="updatecoursebtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="savecoursebtn" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="137" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="updatecourselbl" min="-2" pref="567" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="updatecourselbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="66" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Update Course Details"/>
+              </Properties>
+            </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -748,7 +768,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
+                <Component class="javax.swing.JTable" name="managecoursetbl">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="10">
@@ -789,7 +809,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="updatecoursebtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -803,25 +823,7 @@
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Course Name:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField11">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField11ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel19">
+            <Component class="javax.swing.JLabel" name="courseidlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -829,7 +831,7 @@
                 <Property name="text" type="java.lang.String" value="Course ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField12">
+            <Component class="javax.swing.JTextField" name="courseidtxt">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -837,10 +839,28 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField12ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="courseidtxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel20">
+            <Component class="javax.swing.JLabel" name="coursenamelbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Course Name:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="coursenametxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coursenametxtActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="semesterlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -848,25 +868,7 @@
                 <Property name="text" type="java.lang.String" value="Semester:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField13">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField13ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel21">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Class Capacity:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="semestercombo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -889,7 +891,25 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JLabel" name="classcapacitylbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Class Capacity:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="classcapacitytxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="classcapacitytxtActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="savecoursebtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -901,18 +921,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Save"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel22">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="33" red="66" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Update Course Details"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -938,35 +946,35 @@
                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane4" min="-2" pref="596" max="-2" attributes="0"/>
-                          <Component id="jButton6" min="-2" pref="149" max="-2" attributes="0"/>
+                          <Component id="managestudenttbl" min="-2" pref="149" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="74" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel23" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="studentidlbl" min="-2" pref="107" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="jTextField14" min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="studentidtxt" min="-2" pref="244" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel24" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="studentnamelbl" min="-2" pref="107" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="jTextField15" min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="studentnametxt" min="-2" pref="244" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel25" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
-                                  <Component id="jLabel26" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <Component id="studentcourselbl" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <Component id="studentgradelbl" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton7" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="submitstudentrequestbtn" min="-2" pref="149" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField17" pref="244" max="32767" attributes="0"/>
-                                      <Component id="jComboBox3" max="32767" attributes="0"/>
+                                      <Component id="studentcoursetxt" pref="244" max="32767" attributes="0"/>
+                                      <Component id="studentgradecombo" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="jLabel27" max="32767" attributes="0"/>
+                          <Component id="managestudetlbl" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   </Group>
@@ -980,33 +988,33 @@
                           <Component id="jScrollPane4" min="-2" pref="334" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jLabel27" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="managestudetlbl" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel23" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField14" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentidlbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentidtxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel24" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField15" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentnamelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentnametxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel25" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jTextField17" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentcourselbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentcoursetxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel26" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jComboBox3" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="studentgradelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="studentgradecombo" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton6" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="jButton7" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="managestudenttbl" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="submitstudentrequestbtn" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="121" max="32767" attributes="0"/>
                   </Group>
@@ -1014,6 +1022,18 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="managestudetlbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="66" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Manage Student Request"/>
+              </Properties>
+            </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -1021,7 +1041,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable2">
+                <Component class="javax.swing.JTable" name="studentrequesttbl">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="10">
@@ -1062,7 +1082,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="managestudenttbl">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -1076,18 +1096,7 @@
                 <Property name="text" type="java.lang.String" value="Manage "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField14">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField14ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel23">
+            <Component class="javax.swing.JLabel" name="studentidlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1095,7 +1104,18 @@
                 <Property name="text" type="java.lang.String" value="Student ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel24">
+            <Component class="javax.swing.JTextField" name="studentidtxt">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="studentidtxtActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="studentnamelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1103,7 +1123,7 @@
                 <Property name="text" type="java.lang.String" value="Student  Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField15">
+            <Component class="javax.swing.JTextField" name="studentnametxt">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1111,10 +1131,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField15ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="studentnametxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel25">
+            <Component class="javax.swing.JLabel" name="studentcourselbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1122,15 +1142,7 @@
                 <Property name="text" type="java.lang.String" value="Course Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel26">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Grade:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField17">
+            <Component class="javax.swing.JTextField" name="studentcoursetxt">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1138,10 +1150,18 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField17ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="studentcoursetxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox3">
+            <Component class="javax.swing.JLabel" name="studentgradelbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Grade:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="studentgradecombo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1166,7 +1186,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton7">
+            <Component class="javax.swing.JButton" name="submitstudentrequestbtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -1178,18 +1198,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Submit"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel27">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="33" red="66" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Manage Student Request"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -1217,26 +1225,26 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jTextField9" alignment="1" min="-2" pref="244" max="-2" attributes="0"/>
+                          <Component id="addcoursenametxt" alignment="1" min="-2" pref="244" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jLabel14" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="addcoursenamelbl" min="-2" pref="160" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel16" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="addcoursesemesterlbl" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="addcoursesemestercombo" min="-2" pref="244" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="topicscoveredlbl" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="topicscoveredtxt" min="-2" pref="244" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="addcourseclasscapacitylbl" min="-2" pref="160" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton3" min="-2" pref="162" max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" min="-2" pref="244" max="-2" attributes="0"/>
+                                      <Component id="addcourseclasscapacitytxt" min="-2" pref="244" max="-2" attributes="0"/>
+                                      <Component id="addcoursebtn" min="-2" pref="127" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel15" min="-2" pref="160" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField8" min="-2" pref="244" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel17" min="-2" pref="160" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField10" min="-2" pref="244" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1249,33 +1257,33 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel14" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jTextField9" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcoursenamelbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcoursenametxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel15" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jTextField8" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="topicscoveredlbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="topicscoveredtxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel16" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcoursesemesterlbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcoursesemestercombo" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel17" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jTextField10" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcourseclasscapacitylbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="addcourseclasscapacitytxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace pref="216" max="32767" attributes="0"/>
+                      <Component id="addcoursebtn" min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace pref="213" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="addcoursenamelbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1283,14 +1291,14 @@
                 <Property name="text" type="java.lang.String" value="Course Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="addcoursenametxt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="topicscoveredlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1298,7 +1306,14 @@
                 <Property name="text" type="java.lang.String" value="Topics Covered:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JTextField" name="topicscoveredtxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="addcoursesemesterlbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1306,7 +1321,7 @@
                 <Property name="text" type="java.lang.String" value="Semester:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="addcoursesemestercombo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria Math" size="14" style="0"/>
@@ -1329,7 +1344,22 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JLabel" name="addcourseclasscapacitylbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Class Capacity:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="addcourseclasscapacitytxt">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Cambria Math" size="14" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="addcoursebtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="33" red="66" type="rgb"/>
@@ -1343,33 +1373,11 @@
                 <Property name="text" type="java.lang.String" value="Submit"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel17">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Class Capacity:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField10">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Cambria Math" size="14" style="0"/>
-                </Property>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel28">
+    <Component class="javax.swing.JLabel" name="cclogoicon">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/cloud-campus-logo.png"/>

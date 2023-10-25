@@ -28,8 +28,14 @@ public class CourseDirectory {
         this.courseList = courseList;
     }
     
-    public Course addCourse(int CourseId, String courseName, int professorAssociated){
-        Course course = new Course(CourseId, courseName, professorAssociated);
+    // Getter for courseList based on professor
+    public ArrayList<Course> getCourseListByProfessor(int professorId) {
+        
+        return courseList;
+    }
+    
+    public Course addCourse(int courseId, String courseName, int professorAssociated, String semester, int classCapacity){
+        Course course = new Course(courseId, courseName, professorAssociated, semester, classCapacity);
         courseList.add(course);
         return course;
     }

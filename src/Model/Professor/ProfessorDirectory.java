@@ -12,6 +12,7 @@ import java.util.ArrayList;
  */
 public class ProfessorDirectory {
     private ArrayList<Professor> professorList;
+    private int professorId;
 
     // Constructor declaration for the class
     public ProfessorDirectory() {
@@ -34,7 +35,23 @@ public class ProfessorDirectory {
         return professor;
     }
     
+    // Get details of logged in professor
+    public int getLoggedProfessorID() {
+        return professorId;
+    }
+
+    // Set details of logged in professor
+    public void setLoggedProfessorID(int professorId) {
+        this.professorId = professorId;
+    }
     
-    
+    public Professor getProfessorByProfessorId(int professorId){
+        for(Professor professor:professorList){
+            if(professor.getProfessorId()==professorId){
+                return professor;
+            }
+        }
+        return null;
+    }
     
 }
