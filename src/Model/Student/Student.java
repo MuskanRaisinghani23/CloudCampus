@@ -16,7 +16,11 @@ public class Student {
 
     private int studentId;
     private String studentName;
+    private int studentAge;
     private Date dateStudentCreated;
+    private String studentAddress;
+    private String studentPhone;
+    private String studentEmail;
     private ArrayList<CourseRegistered> coursesRegisteredList;
     // Below ArrayList determines the courses completed by Student, 
     // if this arrayList has 8 courses with grades > 3.2, student can graduate
@@ -130,4 +134,38 @@ public class Student {
     public void setStudentConfirmPassword(String studentConfirmPassword) {
         this.studentConfirmPassword = studentConfirmPassword;
     }
+
+    public int getStudentAge() {
+        return studentAge;
+    }
+
+    public void setStudentAge(int studentAge) {
+        this.studentAge = studentAge;
+    }
+
+    public String getStudentAddress() {
+        return studentAddress;
+    }
+
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
+    }
+
+    public String getStudentPhone() {
+        return studentPhone;
+    }
+
+    public void setStudentPhone(String studentPhone) {
+        this.studentPhone = studentPhone;
+    }
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
+    }
+    
+    
 }

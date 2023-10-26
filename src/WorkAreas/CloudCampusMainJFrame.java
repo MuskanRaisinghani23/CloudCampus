@@ -4,6 +4,8 @@
  */
 package WorkAreas;
 
+import java.awt.Container;
+
 /**
  *
  * @author raisi
@@ -13,6 +15,7 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form CloudCampusMainJFrame
      */
+    CloudCampusMainJFrame cloudCampus;
     public CloudCampusMainJFrame() {
         initComponents();
     }
@@ -160,7 +163,7 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,7 +196,9 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        StudentJPanel studentJPanel = new StudentJPanel();
+        CloudCampusMainJFrame cloudCampus = new CloudCampusMainJFrame();
+        cloudCampus.getContentPane().add(studentJPanel);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

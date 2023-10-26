@@ -11,6 +11,11 @@ import Model.Professor.ProfessorDirectory;
 import Model.Student.CourseRegistered;
 import Model.Student.Student;
 import Model.Student.StudentDirectory;
+import java.awt.Container;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -28,6 +33,8 @@ public class StudentJPanel extends javax.swing.JPanel {
     StudentDirectory studentDirectory;
     ProfessorDirectory professorDirectory;
     CourseDirectory courseDirectory;
+    private StudentJPanel studentJPanel;
+    
     public StudentJPanel(Student student, CourseRegistered courseRegistered, Course course, Professor professor, StudentDirectory studentDirectory,
             ProfessorDirectory professorDirectory,  CourseDirectory courseDirectory ) {
         initComponents();
@@ -43,6 +50,10 @@ public class StudentJPanel extends javax.swing.JPanel {
         displayViewCourseDetails();
         displayRateProfessorDetails();
         displayDeclarationDetails();
+    }
+
+    StudentJPanel() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -105,7 +116,7 @@ public class StudentJPanel extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblCourseDetails = new javax.swing.JTable();
-        btnManageCourse1 = new javax.swing.JButton();
+        btnSearchCourse = new javax.swing.JButton();
         studentViewCourseJPanel = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblViewRegisteredCourses = new javax.swing.JTable();
@@ -134,21 +145,21 @@ public class StudentJPanel extends javax.swing.JPanel {
         comboRateProfessorName = new javax.swing.JComboBox<>();
         studentDeclarationJPanel = new javax.swing.JPanel();
         text1 = new javax.swing.JLabel();
-        lblDeclarationStudentName1 = new javax.swing.JTextField();
+        txtDeclarationStudentName1 = new javax.swing.JTextField();
         text2 = new javax.swing.JLabel();
         text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
-        lblDeclarationStudentName2 = new javax.swing.JTextField();
+        txtDeclarationStudentName2 = new javax.swing.JTextField();
         text5 = new javax.swing.JLabel();
         text6 = new javax.swing.JLabel();
         text7 = new javax.swing.JLabel();
-        lblDeclarationStudentPhone = new javax.swing.JTextField();
+        txtDeclarationStudentPhone = new javax.swing.JTextField();
         text8 = new javax.swing.JLabel();
-        lblDeclarationStudentEmail = new javax.swing.JTextField();
+        txtDeclarationStudentEmail = new javax.swing.JTextField();
         chkDeclaration = new javax.swing.JCheckBox();
         text9 = new javax.swing.JLabel();
-        lblDeclarationStudentName3 = new javax.swing.JTextField();
-        lblDeclarationStudentID = new javax.swing.JTextField();
+        txtDeclarationStudentName3 = new javax.swing.JTextField();
+        txtDeclarationStudentID = new javax.swing.JTextField();
         btnSubmitDeclaration = new javax.swing.JButton();
 
         jCheckBox1.setText("jCheckBox1");
@@ -308,6 +319,11 @@ public class StudentJPanel extends javax.swing.JPanel {
         btnUpdate.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("CLICK TO UPDATE");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         lblStudentPreviousPassword.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
         lblStudentPreviousPassword.setText("Previous Password:");
@@ -322,6 +338,11 @@ public class StudentJPanel extends javax.swing.JPanel {
         btnUpdatePassword.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         btnUpdatePassword.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdatePassword.setText("UPDATE PASSWORD");
+        btnUpdatePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdatePasswordActionPerformed(evt);
+            }
+        });
 
         previousPassword.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
 
@@ -333,6 +354,11 @@ public class StudentJPanel extends javax.swing.JPanel {
         btnSave.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         btnSave.setForeground(new java.awt.Color(255, 255, 255));
         btnSave.setText("SAVE CHANGES");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout studentProfileJPanelLayout = new javax.swing.GroupLayout(studentProfileJPanel);
         studentProfileJPanel.setLayout(studentProfileJPanelLayout);
@@ -383,9 +409,7 @@ public class StudentJPanel extends javax.swing.JPanel {
                     .addGroup(studentProfileJPanelLayout.createSequentialGroup()
                         .addGap(102, 102, 102)
                         .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnUpdatePassword)
-                        .addGap(111, 111, 111))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(studentProfileJPanelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(lblStudentUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 747, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -393,17 +417,19 @@ public class StudentJPanel extends javax.swing.JPanel {
                 .addComponent(jSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUpdateCredentials, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(studentProfileJPanelLayout.createSequentialGroup()
                         .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblStudentPreviousPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblStudentNewPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblStudentConfirmPassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(previousPassword)
-                            .addComponent(newPassword)
-                            .addComponent(confirmNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lblUpdateCredentials, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnUpdatePassword)
+                            .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(previousPassword)
+                                .addComponent(newPassword)
+                                .addComponent(confirmNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         studentProfileJPanelLayout.setVerticalGroup(
@@ -416,8 +442,8 @@ public class StudentJPanel extends javax.swing.JPanel {
                         .addGap(4, 4, 4)
                         .addGroup(studentProfileJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnUpdatePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnUpdatePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(studentProfileJPanelLayout.createSequentialGroup()
                         .addComponent(lblStudentUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15)
@@ -514,10 +540,15 @@ public class StudentJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblCourseDetails);
 
-        btnManageCourse1.setBackground(new java.awt.Color(102, 51, 0));
-        btnManageCourse1.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
-        btnManageCourse1.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageCourse1.setText("SEARCH");
+        btnSearchCourse.setBackground(new java.awt.Color(102, 51, 0));
+        btnSearchCourse.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        btnSearchCourse.setForeground(new java.awt.Color(255, 255, 255));
+        btnSearchCourse.setText("SEARCH");
+        btnSearchCourse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchCourseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout studentCourseRegistrationJPanelLayout = new javax.swing.GroupLayout(studentCourseRegistrationJPanel);
         studentCourseRegistrationJPanel.setLayout(studentCourseRegistrationJPanelLayout);
@@ -544,7 +575,7 @@ public class StudentJPanel extends javax.swing.JPanel {
                                     .addComponent(comboCourseProfessor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(studentCourseRegistrationJPanelLayout.createSequentialGroup()
                         .addGap(102, 102, 102)
-                        .addComponent(btnManageCourse1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(52, 52, 52)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
@@ -573,7 +604,7 @@ public class StudentJPanel extends javax.swing.JPanel {
                             .addComponent(lblSeachLanguage)
                             .addComponent(comboCourseLangauge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(85, 85, 85)
-                        .addComponent(btnManageCourse1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(studentCourseRegistrationJPanelLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(studentCourseRegistrationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -826,7 +857,7 @@ public class StudentJPanel extends javax.swing.JPanel {
 
         text1.setText("Hello");
 
-        text2.setText("<html>Please assert to the below letter, modify details if any and click on submit to raise a request for graduation.</html>");
+        text2.setText("<html>Please assert to the below letter and click on submit to raise a request for graduation.</html>");
 
         text3.setText("Note: You must have completed 8 courses, else the application will be rejected. Once a request is raised you may not eb able to submit again unless it's rejected.</html>");
 
@@ -848,6 +879,11 @@ public class StudentJPanel extends javax.swing.JPanel {
         btnSubmitDeclaration.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         btnSubmitDeclaration.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmitDeclaration.setText("Submit");
+        btnSubmitDeclaration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitDeclarationActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout studentDeclarationJPanelLayout = new javax.swing.GroupLayout(studentDeclarationJPanel);
         studentDeclarationJPanel.setLayout(studentDeclarationJPanelLayout);
@@ -865,30 +901,30 @@ public class StudentJPanel extends javax.swing.JPanel {
                             .addGroup(studentDeclarationJPanelLayout.createSequentialGroup()
                                 .addComponent(text4, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblDeclarationStudentName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDeclarationStudentName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(text5))
                             .addGroup(studentDeclarationJPanelLayout.createSequentialGroup()
                                 .addComponent(text1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lblDeclarationStudentName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDeclarationStudentName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
                                 .addComponent(text2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(text6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(text9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDeclarationStudentName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDeclarationStudentName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(studentDeclarationJPanelLayout.createSequentialGroup()
                                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(text7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblDeclarationStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtDeclarationStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(studentDeclarationJPanelLayout.createSequentialGroup()
-                                        .addComponent(lblDeclarationStudentPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtDeclarationStudentPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(text8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblDeclarationStudentEmail))
+                                        .addComponent(txtDeclarationStudentEmail))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentDeclarationJPanelLayout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(btnSubmitDeclaration, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -901,32 +937,32 @@ public class StudentJPanel extends javax.swing.JPanel {
                 .addGap(92, 92, 92)
                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDeclarationStudentName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeclarationStudentName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(text3)
                 .addGap(40, 40, 40)
                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDeclarationStudentName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeclarationStudentName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addComponent(text6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDeclarationStudentPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeclarationStudentPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDeclarationStudentEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDeclarationStudentEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addComponent(chkDeclaration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(text9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblDeclarationStudentName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDeclarationStudentName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(studentDeclarationJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDeclarationStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeclarationStudentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSubmitDeclaration, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
@@ -953,14 +989,125 @@ public class StudentJPanel extends javax.swing.JPanel {
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
         // TODO add your handling code here:
-        
+        CloudCampusMainJFrame jframe = new CloudCampusMainJFrame();
+        Container frameContent = jframe.getContentPane();
+        studentJPanel.add(frameContent);
     }//GEN-LAST:event_logoutBtnActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        txtStudentID.setEnabled(false);
+        txtStudentName.setEnabled(true);
+        txtStudentAge.setEnabled(true);
+        txtStudentAddress.setEnabled(true);
+        txtStudentContact.setEnabled(true);
+        txtStudentEmail.setEnabled(true);
+        txtStudentRegistered.setEnabled(false);
+        previousPassword.setEnabled(true);
+        newPassword.setEnabled(true);
+        confirmNewPassword.setEnabled(true);  
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        Boolean flag = true;
+        String name = txtStudentName.getText();
+        if(name.matches("[a-zA-Z ]+") == false){
+            JOptionPane.showMessageDialog(null, "Incorrect Name");
+            flag = false;
+            txtStudentName.setText("");
+        }
+        String email = txtStudentEmail.getText();
+        if(email.matches("[a-zA-Z0-9.@]+[gmail|northeastern][.com|.edu]+") == false){
+            JOptionPane.showMessageDialog(null, "Incorrect Email");
+            flag = false;
+            txtStudentEmail.setText("");
+        }
+        int age = Integer.parseInt(txtStudentAge.getText());
+        if(age < 0 && age > 100){
+            JOptionPane.showMessageDialog(null, "Incorrect Date Of Birth");
+            flag = false;
+            txtStudentAge.setText("");
+        }
+        String address = txtStudentAddress.getText();
+        if(address.matches("[a-zA-Z, ]+") == false){
+            JOptionPane.showMessageDialog(null, "Incorrect Address");
+            flag = false;
+            txtStudentAddress.setText("");
+        }
+        String phno = txtStudentContact.getText();
+        if(phno.matches("[0-9]{10}") == false){
+            JOptionPane.showMessageDialog(null, "Incorrect PhoneNumber");
+            flag = false;
+            txtStudentContact.setText("");
+        }
+        if(flag == true){
+            student.setStudentName(name);
+            student.setStudentAge(age);
+            student.setStudentAddress(address);
+            student.setStudentPhone(phno);
+            student.setStudentEmail(email);
+            JOptionPane.showMessageDialog(null, "Student details updated Successfully");       
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Re-enter details to update them Successfully");
+        }
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnUpdatePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePasswordActionPerformed
+        // TODO add your handling code here:
+        Boolean flag = true;
+        String password = new String(newPassword.getPassword());
+        if(((password.matches("[a-zA-Z0-9@._-]{3,}") == false))){
+            JOptionPane.showMessageDialog(null, "Incorrect Password Format");
+            flag = false;
+        }
+        String confirmpassword = new String(confirmNewPassword.getPassword());
+        if((confirmpassword.matches("[a-zA-Z0-9@._-]{3,}") == false) && (password.equals(confirmpassword))){
+            JOptionPane.showMessageDialog(null, "Incorrect Confirm Password");
+            flag = false;
+        }
+        ArrayList passList = student.getPasswordhistory();
+        String lastPassword = (String) passList.get(passList.size()-1);
+        for(String str : student.getPasswordhistory()){
+           if(str.equals(password)){
+               JOptionPane.showMessageDialog(null, "Please don't use any of your previous passwords!");
+                    previousPassword.setText("");
+                    newPassword.setText("");
+                    confirmNewPassword.setText("");
+               return;
+           }
+        }
+        if(flag == true){
+            student.setStudentPassword(password);
+            student.setStudentConfirmPassword(confirmpassword);
+            student.addPasswordHistory(password);
+            JOptionPane.showMessageDialog(null, "Student details updated Successfully");     
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Re-enter details to update password Successfully");
+        }
+    }//GEN-LAST:event_btnUpdatePasswordActionPerformed
+
+    private void btnSearchCourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchCourseActionPerformed
+        // TODO add your handling code here:
+        String professorName = comboCourseProfessor.getSelectedItem().toString();
+        String course = comboCourseTopic.getSelectedItem().toString();
+        String region = comboCourseRegion.getSelectedItem().toString();
+        String location = comboCourseRegion.getSelectedItem().toString();
+        //add code
+    }//GEN-LAST:event_btnSearchCourseActionPerformed
+
+    private void btnSubmitDeclarationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitDeclarationActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSubmitDeclarationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageCourse;
-    private javax.swing.JButton btnManageCourse1;
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnSearchCourse;
     private javax.swing.JButton btnSubmitDeclaration;
     private javax.swing.JButton btnSubmitGradeRequest;
     private javax.swing.JButton btnSubmitRateProfessor;
@@ -983,12 +1130,6 @@ public class StudentJPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField lblDeclarationStudentEmail;
-    private javax.swing.JTextField lblDeclarationStudentID;
-    private javax.swing.JTextField lblDeclarationStudentName1;
-    private javax.swing.JTextField lblDeclarationStudentName2;
-    private javax.swing.JTextField lblDeclarationStudentName3;
-    private javax.swing.JTextField lblDeclarationStudentPhone;
     private javax.swing.JLabel lblNote;
     private javax.swing.JLabel lblRateCourseName;
     private javax.swing.JLabel lblRateProfessor;
@@ -1042,6 +1183,12 @@ public class StudentJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel text7;
     private javax.swing.JLabel text8;
     private javax.swing.JLabel text9;
+    private javax.swing.JTextField txtDeclarationStudentEmail;
+    private javax.swing.JTextField txtDeclarationStudentID;
+    private javax.swing.JTextField txtDeclarationStudentName1;
+    private javax.swing.JTextField txtDeclarationStudentName2;
+    private javax.swing.JTextField txtDeclarationStudentName3;
+    private javax.swing.JTextField txtDeclarationStudentPhone;
     private javax.swing.JTextField txtRateCourseName;
     private javax.swing.JTextField txtRateProfessor;
     private javax.swing.JTextArea txtStudentAddress;
@@ -1057,13 +1204,67 @@ public class StudentJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void displayStudentProfileDetails() {
-        for()
-    }
+        txtStudentID.setText(String.valueOf(student.getStudentId()));
+        txtStudentName.setText(student.getStudentName());
+        txtStudentAge.setText(String.valueOf(student.getStudentAge()));
+        txtStudentAddress.setText(student.getStudentAddress());
+        txtStudentContact.setText(student.getStudentPhone());
+        txtStudentEmail.setText(student.getStudentEmail());
+        if(!student.getCoursesRegisteredList().isEmpty()){
+            txtStudentRegistered.setText("YES");
+        }
+        else{
+           txtStudentRegistered.setText("NO"); 
+        }
+        previousPassword.setText(student.getStudentPassword());
+        txtStudentID.setEnabled(false);
+        txtStudentName.setEnabled(false);
+        txtStudentAge.setEnabled(false);
+        txtStudentAddress.setEnabled(false);
+        txtStudentContact.setEnabled(false);
+        txtStudentEmail.setEnabled(false);
+        txtStudentRegistered.setEnabled(false);
+        previousPassword.setEnabled(false);
+        newPassword.setEnabled(false);
+        confirmNewPassword.setEnabled(false);     
+   }
 
     private void displayCourseRegistrationDetails() {
-        
+       // DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>();
+        ArrayList<String> professorNameList = professorDirectory.getProfessorNameList();
+        for(String item : professorNameList){
+            //comboBoxModel.addItem(list);
+            comboCourseProfessor.addItem(item);
+        }
+        //comboCourseProfessor.setModel(comboBoxModel);
+        ArrayList<String> professorLanguage = professorDirectory.getProfessorLanguage();
+        for(String item : professorLanguage){
+            comboCourseLangauge.addItem(item);
+        }
+        ArrayList<String> professorLocation = professorDirectory.getProfessorLocation();
+        for(String item : professorLocation){
+            comboCourseRegion.addItem(item);
+        }
+        ArrayList<String> courseName = courseDirectory.getCourseName();
+        for(String item : courseName){
+            comboCourseTopic.addItem(item);
+        }
     }
 
+    private void populateTable(){
+        DefaultTableModel dtm = (DefaultTableModel) tblCourseDetails.getModel();
+        dtm.setRowCount(0);
+        for(Professor prof : professorDirectory.getProfessorList()){
+            Object[] row = new Object[5];
+            row[0] = prof.getProfessorName();
+            row[1] = prof.getCoursesOffered();
+            row[2] = prof.getLocation();
+            row[3] = prof.getLangOfInstruction();
+            row[4] = prof.getRatingsList();
+            dtm.addRow(row);    
+        }
+    }
+    
     private void displayViewCourseDetails() {
         
     }
@@ -1073,6 +1274,17 @@ public class StudentJPanel extends javax.swing.JPanel {
     }
 
     private void displayDeclarationDetails() {
-        
+        txtDeclarationStudentName1.setText(student.getStudentName());
+        txtDeclarationStudentName2.setText(student.getStudentName());
+        txtDeclarationStudentName3.setText(student.getStudentName());
+        txtDeclarationStudentPhone.setText(student.getStudentPhone());
+        txtDeclarationStudentEmail.setText(student.getStudentEmail());
+        txtDeclarationStudentID.setText(String.valueOf(student.getStudentId()));
+        txtDeclarationStudentName1.setEnabled(false);
+        txtDeclarationStudentName2.setEnabled(false);
+        txtDeclarationStudentName3.setEnabled(false);
+        txtDeclarationStudentPhone.setEnabled(false);
+        txtDeclarationStudentEmail.setEnabled(false);
+        txtDeclarationStudentID.setEnabled(false);
     }
 }

@@ -319,8 +319,6 @@
                                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                                       <Component id="btnSave" min="-2" pref="162" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnUpdatePassword" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -331,20 +329,23 @@
                               <Component id="jSeparator" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Component id="lblUpdateCredentials" min="-2" pref="349" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="lblStudentPreviousPassword" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblStudentNewPassword" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblStudentConfirmPassword" alignment="1" min="-2" pref="122" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="previousPassword" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="newPassword" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="confirmNewPassword" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btnUpdatePassword" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="previousPassword" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="newPassword" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="confirmNewPassword" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
-                                  <Component id="lblUpdateCredentials" min="-2" pref="349" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
                           </Group>
@@ -360,8 +361,8 @@
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="btnUpdate" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="btnUpdatePassword" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                           <Component id="btnSave" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                          <Component id="btnUpdatePassword" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -596,6 +597,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="CLICK TO UPDATE"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblStudentPreviousPassword">
                       <Properties>
@@ -634,6 +638,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="UPDATE PASSWORD"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdatePasswordActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JPasswordField" name="previousPassword">
                       <Properties>
@@ -669,6 +676,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="SAVE CHANGES"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -716,7 +726,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                                      <Component id="btnManageCourse1" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="btnSearchCourse" min="-2" pref="149" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
@@ -753,7 +763,7 @@
                                           <Component id="comboCourseLangauge" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="btnManageCourse1" min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="btnSearchCourse" min="-2" pref="36" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -896,7 +906,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="btnManageCourse1">
+                    <Component class="javax.swing.JButton" name="btnSearchCourse">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="33" red="66" type="rgb"/>
@@ -909,6 +919,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="SEARCH"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchCourseActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1421,33 +1434,33 @@
                                           <Group type="102" attributes="0">
                                               <Component id="text4" min="-2" pref="12" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="lblDeclarationStudentName2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtDeclarationStudentName2" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="text5" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="text1" min="-2" pref="46" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="lblDeclarationStudentName1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtDeclarationStudentName1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="text2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="text6" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="text9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblDeclarationStudentName3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtDeclarationStudentName3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="text7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="lblDeclarationStudentID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtDeclarationStudentID" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="lblDeclarationStudentPhone" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txtDeclarationStudentPhone" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="text8" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="lblDeclarationStudentEmail" max="32767" attributes="0"/>
+                                                      <Component id="txtDeclarationStudentEmail" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1469,7 +1482,7 @@
                               <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="text1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="lblDeclarationStudentName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDeclarationStudentName1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="text2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1477,7 +1490,7 @@
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="text4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="lblDeclarationStudentName2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDeclarationStudentName2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="text5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -1485,19 +1498,19 @@
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="text7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblDeclarationStudentPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDeclarationStudentPhone" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="text8" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="lblDeclarationStudentEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDeclarationStudentEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="chkDeclaration" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="text9" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblDeclarationStudentName3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDeclarationStudentName3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblDeclarationStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDeclarationStudentID" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnSubmitDeclaration" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="49" max="32767" attributes="0"/>
@@ -1511,11 +1524,11 @@
                         <Property name="text" type="java.lang.String" value="Hello"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentName1">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentName1">
                     </Component>
                     <Component class="javax.swing.JLabel" name="text2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Please assert to the below letter, modify details if any and click on submit to raise a request for graduation.&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Please assert to the below letter and click on submit to raise a request for graduation.&lt;/html&gt;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="text3">
@@ -1528,7 +1541,7 @@
                         <Property name="text" type="java.lang.String" value="I"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentName2">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentName2">
                     </Component>
                     <Component class="javax.swing.JLabel" name="text5">
                       <Properties>
@@ -1545,14 +1558,14 @@
                         <Property name="text" type="java.lang.String" value="&lt;html&gt;Please confirm the receipt of this letter and the status of my graduation application at your earliest convenience. You can reach me at&lt;/html&gt;"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentPhone">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentPhone">
                     </Component>
                     <Component class="javax.swing.JLabel" name="text8">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="or"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentEmail">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentEmail">
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chkDeclaration">
                       <Properties>
@@ -1564,9 +1577,9 @@
                         <Property name="text" type="java.lang.String" value="&lt;html&gt;Sincerely, &lt;/html&gt;"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentName3">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentName3">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="lblDeclarationStudentID">
+                    <Component class="javax.swing.JTextField" name="txtDeclarationStudentID">
                     </Component>
                     <Component class="javax.swing.JButton" name="btnSubmitDeclaration">
                       <Properties>
@@ -1581,6 +1594,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Submit"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitDeclarationActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

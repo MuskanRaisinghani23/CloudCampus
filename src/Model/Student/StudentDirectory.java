@@ -39,7 +39,7 @@ public class StudentDirectory {
     //To search student based on 
     public Student searchUser(String userName){
         for(Student studentInfo: studentList){
-            if(studentInfo.getUserName().equals(userName)){
+            if(studentInfo.getStudentUserName().equals(userName)){
                 return studentInfo;
             }
         }
