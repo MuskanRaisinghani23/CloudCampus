@@ -4,8 +4,12 @@
  */
 package WorkAreas;
 
+import Model.Course.Course;
+import Model.Course.CourseDirectory;
 import Model.Professor.Professor;
 import Model.Professor.ProfessorDirectory;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -20,14 +24,16 @@ public class ProfessorJPanel extends javax.swing.JPanel {
      */
     private JPanel HomeJPanel;
     private ProfessorDirectory manageprofessor;
+    private CourseDirectory managecourse;
     
-    ProfessorJPanel(JPanel HomeJPanel) {
+    ProfessorJPanel(JPanel HomeJPanel, ProfessorDirectory manageprofessor, CourseDirectory managecourse) {
         initComponents();
         this.HomeJPanel = HomeJPanel;
         this.manageprofessor = manageprofessor;
+        this.managecourse = managecourse;
         viewProfessorDetails();
         populateCourses();
-        populatesStudentRequest();
+//        populatesStudentRequest();
     }
 
     /**
@@ -76,7 +82,6 @@ public class ProfessorJPanel extends javax.swing.JPanel {
         confirmpasstxt = new javax.swing.JPasswordField();
         updatepassbtn = new javax.swing.JButton();
         professorManageCoursesJPanel = new javax.swing.JPanel();
-        updatecourselbl = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         managecoursetbl = new javax.swing.JTable();
         updatecoursebtn = new javax.swing.JButton();
@@ -89,6 +94,7 @@ public class ProfessorJPanel extends javax.swing.JPanel {
         classcapacitylbl = new javax.swing.JLabel();
         classcapacitytxt = new javax.swing.JTextField();
         savecoursebtn = new javax.swing.JButton();
+        updatecourselbl = new javax.swing.JLabel();
         professorManageStudentsJPanel = new javax.swing.JPanel();
         managestudetlbl = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -430,11 +436,6 @@ public class ProfessorJPanel extends javax.swing.JPanel {
 
         professorManageCoursesJPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        updatecourselbl.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
-        updatecourselbl.setForeground(new java.awt.Color(102, 51, 0));
-        updatecourselbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        updatecourselbl.setText("Update Course Details");
-
         managecoursetbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -474,6 +475,11 @@ public class ProfessorJPanel extends javax.swing.JPanel {
         updatecoursebtn.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         updatecoursebtn.setForeground(new java.awt.Color(255, 255, 255));
         updatecoursebtn.setText("Update");
+        updatecoursebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatecoursebtnActionPerformed(evt);
+            }
+        });
 
         courseidlbl.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
         courseidlbl.setText("Course ID:");
@@ -517,6 +523,11 @@ public class ProfessorJPanel extends javax.swing.JPanel {
         savecoursebtn.setForeground(new java.awt.Color(255, 255, 255));
         savecoursebtn.setText("Save");
 
+        updatecourselbl.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        updatecourselbl.setForeground(new java.awt.Color(102, 51, 0));
+        updatecourselbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        updatecourselbl.setText("Update Course Details");
+
         javax.swing.GroupLayout professorManageCoursesJPanelLayout = new javax.swing.GroupLayout(professorManageCoursesJPanel);
         professorManageCoursesJPanel.setLayout(professorManageCoursesJPanelLayout);
         professorManageCoursesJPanelLayout.setHorizontalGroup(
@@ -526,43 +537,43 @@ public class ProfessorJPanel extends javax.swing.JPanel {
                 .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updatecoursebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                            .addComponent(semesterlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(42, 42, 42)
-                            .addComponent(semestercombo, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                            .addComponent(classcapacitylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(42, 42, 42)
-                            .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(savecoursebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(classcapacitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                        .addComponent(courseidlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(courseidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
+                                    .addComponent(semesterlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(42, 42, 42)
+                                    .addComponent(semestercombo, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
+                                    .addComponent(classcapacitylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(42, 42, 42)
+                                    .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(savecoursebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(classcapacitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
+                                .addComponent(courseidlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(courseidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
+                                .addComponent(coursenamelbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(coursenametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                        .addComponent(coursenamelbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(coursenametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(64, 64, 64)
+                        .addComponent(updatecourselbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(70, 70, 70))
-            .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(updatecourselbl, javax.swing.GroupLayout.PREFERRED_SIZE, 1200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         professorManageCoursesJPanelLayout.setVerticalGroup(
             professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addComponent(updatecourselbl, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
                         .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(courseidlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(courseidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -583,11 +594,6 @@ public class ProfessorJPanel extends javax.swing.JPanel {
                     .addComponent(updatecoursebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(savecoursebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(137, Short.MAX_VALUE))
-            .addGroup(professorManageCoursesJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(professorManageCoursesJPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(updatecourselbl, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         professortabbedpane.addTab("Manage Courses", professorManageCoursesJPanel);
@@ -837,7 +843,9 @@ public class ProfessorJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
-        // TODO add your handling code here:
+        HomeJPanel.remove(this);
+        CardLayout layout = (CardLayout) HomeJPanel.getLayout();
+        layout.previous(HomeJPanel);
     }//GEN-LAST:event_logoutBtnActionPerformed
 
     private void experiencetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experiencetxtActionPerformed
@@ -871,6 +879,22 @@ public class ProfessorJPanel extends javax.swing.JPanel {
     private void studentcoursetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentcoursetxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_studentcoursetxtActionPerformed
+
+    private void updatecoursebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatecoursebtnActionPerformed
+        int selectedRowIndex = managecoursetbl.getSelectedRow();
+        
+        if(selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select a row to view.");
+        }
+        else{
+            DefaultTableModel model = (DefaultTableModel) managecoursetbl.getModel();
+            Course selectedCourse = (Course) model.getValueAt(selectedRowIndex, 0);
+            courseidtxt.setText(String.valueOf(selectedCourse.getCourseId()));
+            coursenametxt.setText(selectedCourse.getCourseName());
+            semestercombo.setSelectedItem(selectedCourse.getSemester());
+            classcapacitytxt.setText(String.valueOf(selectedCourse.getClassCapacity()));
+        }
+    }//GEN-LAST:event_updatecoursebtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -952,6 +976,7 @@ public class ProfessorJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void viewProfessorDetails() {
+        manageprofessor.setLoggedProfessorID(1);  // Need to delete this line later
         int activeProfessorId = manageprofessor.getLoggedProfessorID();
         Professor professor = manageprofessor.getProfessorByProfessorId(activeProfessorId);
         
@@ -970,19 +995,15 @@ public class ProfessorJPanel extends javax.swing.JPanel {
         int activeProfessorId = manageprofessor.getLoggedProfessorID();
         dtm.setRowCount(0);
         
-        if(!manageprofessor.getProfessorList().isEmpty()){
-//            for(Professor professor: manageprofessor.getCourseListByProfessor(activeProfessorId)){
-//                Object[] row = new Object[4];
-//                row[0] = professor.get;
-//                row[1] = professor.getUserName();
-//                row[2] = professor.getNeuId();
-//                row[3] = professor.getNeuId();
-//                dtm.addRow(row);
-//                
+//        if(!manageprofessor.getProfessorList().isEmpty()){
+            for(Course course: managecourse.getCourseListByProfessor(activeProfessorId)){
+                Object[] row = new Object[4];
+                row[0] = course;
+                row[1] = course.getCourseName();
+                row[2] = course.getSemester();
+                row[3] = course.getClassCapacity();
+                dtm.addRow(row);      
 //            }
-        }
-        else{
-            System.out.println("No person record exist");
         }
     }
 

@@ -4,7 +4,10 @@
  */
 package Model.Professor;
 
+import Model.Database.SQLiteDatabaseConnection;
 import java.util.ArrayList;
+import java.sql.*;
+
 
 /**
  *
@@ -17,6 +20,7 @@ public class ProfessorDirectory {
     // Constructor declaration for the class
     public ProfessorDirectory() {
         this.professorList = new ArrayList<>();
+        fetchProfessorsFromDB();
     }
     
     // Getter for certificateIssuedList
@@ -52,6 +56,35 @@ public class ProfessorDirectory {
             }
         }
         return null;
+    }
+
+    private void fetchProfessorsFromDB() {
+        Connection conn = SQLiteDatabaseConnection.connect(); 
+        try{
+            Statement statement = conn.createStatement();
+            String query = "SELECT * FROM Professor;";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int professorId = resultSet.getInt("professorId");
+                String professorName = resultSet.getString("professorName");
+                int professorAge = resultSet.getInt("age");
+                String professorAddress = resultSet.getString("address");
+                float yearsOfExperience = resultSet.getFloat("yearsOfExperience"); 
+                String langOfInstruction = resultSet.getString("langOfInstruction");
+                ArrayList<String> coursesOffered = new ArrayList<>(); // Need to fetch courses from course table using for loop
+                ArrayList<String> topicsCovered = new ArrayList<>();  // Need to figure this out
+                ArrayList<Integer> ratingsList = new ArrayList<>();  // Need to figure this out
+                int researchPaperPublished = resultSet.getInt("researchPaperPublished");
+                String description = resultSet.getString("description");
+                Professor professor = new Professor(professorId, professorName, professorAge, professorAddress, yearsOfExperience, langOfInstruction, coursesOffered, topicsCovered, ratingsList, researchPaperPublished, description);
+//                System.out.println(professorName);
+                professorList.add(professor);
+            }
+        }
+        catch(Exception e){
+            System.out.println("Exception raised: " + e);
+        }
     }
     
 }

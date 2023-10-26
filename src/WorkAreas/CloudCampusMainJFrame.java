@@ -4,6 +4,10 @@
  */
 package WorkAreas;
 
+import Model.Course.CourseDirectory;
+import Model.Professor.ProfessorDirectory;
+import java.awt.CardLayout;
+
 /**
  *
  * @author raisi
@@ -13,8 +17,13 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form CloudCampusMainJFrame
      */
+    private ProfessorDirectory manageprofessor;
+    private CourseDirectory managecourse;
+    
     public CloudCampusMainJFrame() {
         initComponents();
+        this.manageprofessor = new ProfessorDirectory();
+        this.managecourse = new CourseDirectory();
     }
 
     /**
@@ -26,7 +35,7 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        HomeJPanel = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -43,7 +52,8 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        HomeJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        HomeJPanel.setLayout(new java.awt.CardLayout());
 
         jSplitPane1.setDividerLocation(95);
         jSplitPane1.setDividerSize(1);
@@ -175,18 +185,9 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setRightComponent(jPanel3);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
-        );
+        HomeJPanel.add(jSplitPane1, "card2");
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 700));
+        getContentPane().add(HomeJPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 700));
 
         pack();
         setLocationRelativeTo(null);
@@ -197,7 +198,10 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        ProfessorJPanel panel = new ProfessorJPanel(HomeJPanel, manageprofessor, managecourse);
+        HomeJPanel.add("ProfessorJPanel", panel);
+        CardLayout layout= (CardLayout) HomeJPanel.getLayout();
+        layout.next(HomeJPanel);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -236,6 +240,7 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel HomeJPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -245,7 +250,6 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
