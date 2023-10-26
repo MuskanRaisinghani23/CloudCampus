@@ -234,7 +234,8 @@ public class StudentJPanel extends javax.swing.JPanel {
         studentHomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         studentHomeLabel.setText("<html>Welcome to the Student Portal!, your all-in-one solution for managing your educational journey, efficiently coordinating your schedule, and connecting with professors and courses.  <br>Here, you'll find the tools and resources to enhance your academic experience, connect with your professors, and make the most of your educational opportunities.  <br>Let's embark on this journey together, ensuring you get the best out of your time in academia.</html>");
 
-        studentHomeLogo.setText("Add logo for student");
+        studentHomeLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/studentHome.png"))); // NOI18N
+        studentHomeLogo.setPreferredSize(new java.awt.Dimension(450, 325));
 
         javax.swing.GroupLayout studentHomeJPanelLayout = new javax.swing.GroupLayout(studentHomeJPanel);
         studentHomeJPanel.setLayout(studentHomeJPanelLayout);
@@ -246,8 +247,8 @@ public class StudentJPanel extends javax.swing.JPanel {
                         .addGap(36, 36, 36)
                         .addComponent(studentHomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(studentHomeJPanelLayout.createSequentialGroup()
-                        .addGap(427, 427, 427)
-                        .addComponent(studentHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(376, 376, 376)
+                        .addComponent(studentHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         studentHomeJPanelLayout.setVerticalGroup(
@@ -255,9 +256,9 @@ public class StudentJPanel extends javax.swing.JPanel {
             .addGroup(studentHomeJPanelLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(studentHomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(studentHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(studentHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         studentTabbedPanel.addTab("Home", studentHomeJPanel);
