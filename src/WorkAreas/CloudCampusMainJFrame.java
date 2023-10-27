@@ -7,11 +7,8 @@ package WorkAreas;
 import Model.Course.CourseDirectory;
 import Model.Professor.ProfessorDirectory;
 import java.awt.CardLayout;
-import javax.swing.JPanel;
-/**
- *
- * @author raisi
- */
+
+
 public class CloudCampusMainJFrame extends javax.swing.JFrame {
 
     /**
@@ -19,7 +16,8 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
      */
     private ProfessorDirectory manageprofessor;
     private CourseDirectory managecourse;
-    
+    CloudCampusMainJFrame cloudCampus;
+
     public CloudCampusMainJFrame() {
         initComponents();
         this.manageprofessor = new ProfessorDirectory();
@@ -257,6 +255,15 @@ public class CloudCampusMainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        StudentJPanel studentJPanel = new StudentJPanel();
+        CloudCampusMainJFrame cloudCampus = new CloudCampusMainJFrame();
+        cloudCampus.getContentPane().add(studentJPanel);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) { 
+    
+    }                                        
     private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginbtnActionPerformed

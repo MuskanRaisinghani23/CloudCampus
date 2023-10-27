@@ -20,5 +20,37 @@ public class CourseRegistered {
         this.professorAssociated = professorAssociated;
         this.gradePointerAchieved = gradePointerAchieved;
     }
+
+    public int getRegisteredCourseId() {
+        return registeredCourseId;
+    }
+
+    public void setRegisteredCourseId(int registeredCourseId) {
+        this.registeredCourseId = registeredCourseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public int getProfessorAssociated() {
+        return professorAssociated;
+    }
+
+    public void setProfessorAssociated(int professorAssociated) {
+        this.professorAssociated = professorAssociated;
+    }
+
+    public float getGradePointerAchieved() {
+        return gradePointerAchieved;
+    }
+
+    public void setGradePointerAchieved(float gradePointerAchieved) {
+        this.gradePointerAchieved = gradePointerAchieved;
+    }
     
 }

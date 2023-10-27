@@ -8,6 +8,8 @@ import Model.Database.SQLiteDatabaseConnection;
 import Model.Professor.Professor;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -15,10 +17,14 @@ import java.util.ArrayList;
  */
 public class CourseDirectory {
     private ArrayList<Course> courseList;
+    public Set<String> Name;
+    public ArrayList<String> courseName;
     
     // Constructor declaration for the class
     public CourseDirectory() {
         this.courseList = new ArrayList<>();
+        this.Name = new HashSet<>();
+        this.courseName = new ArrayList<>();
     }
     
     // Getter for courseList
@@ -62,4 +68,13 @@ public class CourseDirectory {
         return course;
     }
     
+    public ArrayList<String> getCourseName(){
+       for(Course course: courseList){
+           String name = course.getCourseName();
+           if(Name.add(name)){
+               courseName.add(name);
+           }
+       }
+       return courseName;
+   } 
 }

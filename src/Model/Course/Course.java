@@ -62,7 +62,7 @@ public class Course {
     public void setClassCapacity(int classCapacity) {
         this.classCapacity = classCapacity;
     }
-    
+
     @Override
     public String toString(){
         return String.valueOf(courseId);

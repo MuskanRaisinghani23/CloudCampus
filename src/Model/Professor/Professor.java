@@ -22,8 +22,11 @@ public class Professor {
     private ArrayList<Integer> ratingsList;
     private int researchPaperPublished;
     private String description;
+    private String location;
 
-    public Professor(int professorId, String professorName, int professorAge, String professorAddress, float yearsOfExperience, String langOfInstruction, ArrayList<String> coursesOffered, ArrayList<String> topicsCovered, ArrayList<Integer> ratingsList, int researchPaperPublished, String description) {
+    public Professor(int professorId, String professorName, int professorAge, String professorAddress, float yearsOfExperience, 
+            String langOfInstruction, ArrayList<String> coursesOffered, ArrayList<String> topicsCovered, ArrayList<Integer> ratingsList, 
+            int researchPaperPublished, String description, String location) {
         this.professorId = professorId;
         this.professorName = professorName;
         this.professorAge = professorAge;
@@ -35,6 +38,7 @@ public class Professor {
         this.ratingsList = new ArrayList<>();
         this.researchPaperPublished = researchPaperPublished;
         this.description = description;
+        this.location = location;
     }
 
     public int getProfessorId() {
@@ -125,6 +129,13 @@ public class Professor {
         this.description = description;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
     
     
 }
