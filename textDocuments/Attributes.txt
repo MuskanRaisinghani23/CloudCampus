@@ -1,0 +1,40 @@
+Course:
+	courseId
+	courseName
+	professorAssociated
+	
+Professor:
+	professorId
+	professorName
+	professorPassword
+	professorAge
+	professorAddress
+	yearsOfExperience
+	langOfInstruction
+	coursesOffered
+	topicsCovered
+	ratingsList
+	researchPaperPublished
+	description
+	
+Student:
+	studentId
+	studentName
+	studentPassword
+	dateStudentCreated
+	studentAge
+	studentAddress
+	courseRegistered
+	transcript
+	certificateIssued
+	wantToGraduate
+	
+CourseRegistered
+	registeredCourseId
+	courseName
+	professorAssociated
+	gradePointAchieved
+	
+Employer
+	
+	
