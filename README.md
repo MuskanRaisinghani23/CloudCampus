@@ -1,4 +1,4 @@
-# Cloud Campus - Digital Education Platform - updated
+# Cloud Campus - Digital Education Platform
 
 ## Introduction
 
@@ -79,9 +79,11 @@ To run Cloud Campus, you need the following software and tools installed on your
 
 11. **Capacity control**: Students will not able to register for the classes once the capacity exceeds.
 
-10. **Flexibilty**: Students can drop courses after registering it , if they don't like the course anytime.
+12. **Flexibilty**: Students can drop courses after registering it , if they don't like the course anytime.
 
+13. **Real Time Modification**: Professors can view real-time modifications to courses.
 
+14. **Determining capacity**: Professors can create/modify course capacity of individual courses.
 
 
 
