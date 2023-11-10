@@ -87,8 +87,6 @@ To run Cloud Campus, you need the following software and tools installed on your
 
 
 
-
-
 ## Contributing
 
 We welcome contributions from the community to improve Cloud Campus. If you'd like to contribute, please follow these steps:
