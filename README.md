@@ -13,23 +13,20 @@ Cloud Campus is an advanced digital education platform developed using Java with
 - **Admin Panel**: Admin access for Assessment of professors, students, courses, and third party certification.
 - **Curriculum Flexibility**: student can drop the particular course if they want to switch to different field or course within 30 days of beginning of the term.
 
-## Diagrams URL and screenshots of panel
+## Diagrams and Screenshots of project
 
-**Cloud Campus Class diagram URL**
-https://ibb.co/m0b68qY
+**Class diagram**
+![Class diagram](/src/Screenshots/class-diagram.png)
 
 **Architecture diagram**
-https://ibb.co/myGNwj0
+![Architecture diagram](/src/Screenshots/Architecture-diagram-Cloud-campus.png)
 
 **Screenshots of working panel**
-https://ibb.co/ZxRfkN4
-https://ibb.co/kKg2yGm
-https://ibb.co/q9nC5kg
-https://ibb.co/HBrQCTK
-https://ibb.co/W3nwXxY
-https://ibb.co/ZmwS2Sg
-https://ibb.co/zR4PpMQ
-https://ibb.co/C9Ybxyq
+![Student Panel Home Screen](/src/Screenshots/student-panel.JPG)
+![Student Panel Course Filtering](/src/Screenshots/student-course-filtering.JPG)
+![Student Graduation Certificate](/src/Screenshots/grad-certificate.JPG)
+![Professor Panel](/src/Screenshots/professor-panel.png)
+![Professor Panel Manage Courses](/src/Screenshots/professor-manage-courses.JPG)
 
 
 ## Requirements
@@ -109,16 +106,12 @@ We welcome contributions from the community to improve Cloud Campus. If you'd li
 4. **Data-Driven Insights**: Enhanced data analytics for tracking student performance and offering timely interventions to improve learning outcomes.
 5. **Credentialing and Certification**: Expansion of online credentialing and certification programs, catering to lifelong learners and professionals seeking upskilling opportunities.
 
-## License
+## Authors
+- [Muskan Raisinghani](raisinghani.m@northeastern.edu)
+- [Anusha Gali](gali.anu@northeastern.edu)
+- [Ashutosh Dwivedi](dwivedi.as@northeastern.edu)
 
-This project is licensed under the [NEU License](LICENSE.md). You are free to use, modify, and distribute it in accordance with the terms specified in the license.
 
-## Contact
-
-For any questions, suggestions, or issues, please contact us at [www.CloudCampus.com](mailto:your.email@example.com).
-
----
-
-Thank you for choosing Cloud Campus for your digital education needs. Enjoy a seamless and interactive learning experience!
+Enjoy a seamless and interactive learning experience with CloudCampus!
 
 Happy learning!
