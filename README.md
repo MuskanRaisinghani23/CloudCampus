@@ -83,21 +83,6 @@ To run Cloud Campus, you need the following software and tools installed on your
 14. **Determining capacity**: Professors can create/modify course capacity of individual courses.
 
 
-
-## Contributing
-
-We welcome contributions from the community to improve Cloud Campus. If you'd like to contribute, please follow these steps:
-
-1. Fork the repository.
-
-2. Create a new branch for your feature or bug fix.
-
-3. Make your changes and test them thoroughly.
-
-4. Submit a pull request, describing the changes you've made.
-
-5. Your pull request will be reviewed, and once approved, it will be merged into the main branch.
-
 ## Future scope
 
 1. **Hybrid Learning Environments**: The continued integration of in-person and online learning, allowing students to access educational content and collaborate     from anywhere.
